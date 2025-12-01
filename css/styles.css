@@ -5,16 +5,19 @@
 
 /* CSS Custom Properties (Variables) */
 :root {
-    /* Colour Palette */
-    --color-ocean: #0099CC;
-    --color-sand: #F4D03F;
-    --color-sea-green: #26A69A;
+    /* Colour Palette - White & Blue Theme */
+    --color-ocean: #0052CC;
+    --color-sand: #0052CC;
+    --color-sea-green: #003DA5;
     --color-white: #FFFFFF;
-    --color-dark: #1A1A2E;
-    --color-coral: #FF6B6B;
-    --color-light-bg: #F8FAFC;
-    --color-border: #E2E8F0;
-    --color-text-muted: #64748B;
+    --color-dark: #0F1428;
+    --color-coral: #0052CC;
+    --color-light-bg: #F5F7FB;
+    --color-border: #DCDCE6;
+    --color-text-muted: #5B5F73;
+    --color-blue-light: #E8EFFF;
+    --color-blue-medium: #4A7FDB;
+    --color-blue-dark: #001D66;
 
     /* Spacing */
     --spacing-xs: 0.25rem;
@@ -114,14 +117,14 @@ p {
 }
 
 a {
-    color: var(--color-ocean);
+    color: #0052CC;
     text-decoration: none;
     transition: color var(--transition-fast);
 }
 
 a:hover, a:focus {
-    color: var(--color-sea-green);
-    outline: 2px solid var(--color-ocean);
+    color: #003DA5;
+    outline: 2px solid #0052CC;
     outline-offset: 2px;
 }
 
@@ -132,7 +135,7 @@ button, input, textarea, select {
 
 /* Focus Visible for Accessibility */
 *:focus-visible {
-    outline: 2px solid var(--color-ocean);
+    outline: 2px solid #0052CC;
     outline-offset: 2px;
 }
 
@@ -185,7 +188,7 @@ button, input, textarea, select {
 }
 
 .logo:hover {
-    color: var(--color-ocean);
+    color: #0052CC;
 }
 
 .logo-icon {
@@ -231,7 +234,7 @@ button, input, textarea, select {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--color-ocean);
+    background-color: #0052CC;
     transition: width var(--transition-fast);
 }
 
@@ -288,22 +291,22 @@ button, input, textarea, select {
 }
 
 .btn-primary {
-    background-color: var(--color-ocean);
+    background-color: #0052CC;
     color: var(--color-white);
 }
 
 .btn-primary:hover, .btn-primary:focus {
-    background-color: #0077AA;
+    background-color: #003DA5;
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--color-ocean);
-    border-color: var(--color-ocean);
+    color: #0052CC;
+    border-color: #0052CC;
 }
 
 .btn-secondary:hover, .btn-secondary:focus {
-    background-color: var(--color-ocean);
+    background-color: #0052CC;
     color: var(--color-white);
 }
 
@@ -322,7 +325,7 @@ button, input, textarea, select {
    ======================================== */
 
 .hero {
-    background: linear-gradient(135deg, var(--color-ocean) 0%, var(--color-sea-green) 100%);
+    background: linear-gradient(135deg, #0052CC 0%, #003DA5 100%);
     color: var(--color-white);
     padding: var(--spacing-3xl) var(--spacing-md);
     text-align: center;
@@ -473,7 +476,7 @@ button, input, textarea, select {
 }
 
 .feature-card h3 {
-    color: var(--color-ocean);
+    color: #0052CC;
     margin-bottom: var(--spacing-md);
 }
 
@@ -500,7 +503,7 @@ button, input, textarea, select {
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-xl);
     margin-bottom: var(--spacing-2xl);
-    background: linear-gradient(135deg, var(--color-ocean) 0%, var(--color-sea-green) 100%);
+    background: linear-gradient(135deg, #0052CC 0%, #003DA5 100%);
     border-radius: var(--radius-xl);
     overflow: hidden;
     box-shadow: var(--shadow-lg);
@@ -515,7 +518,7 @@ button, input, textarea, select {
 }
 
 .cleanup-info h3 {
-    color: var(--color-sand);
+    color: #E8EFFF;
     font-size: var(--font-size-2xl);
     margin-bottom: var(--spacing-lg);
 }
@@ -527,7 +530,7 @@ button, input, textarea, select {
 }
 
 .cleanup-info strong {
-    color: var(--color-sand);
+    color: #E8EFFF;
 }
 
 .cleanup-info .btn {
@@ -620,7 +623,7 @@ button, input, textarea, select {
 
 .weather-section {
     padding: var(--spacing-3xl) var(--spacing-md);
-    background: linear-gradient(135deg, rgba(0, 153, 204, 0.05), rgba(38, 166, 154, 0.05));
+    background: linear-gradient(135deg, rgba(0, 82, 204, 0.05), rgba(0, 61, 165, 0.05));
 }
 
 .weather-section h2 {
@@ -647,13 +650,13 @@ button, input, textarea, select {
 }
 
 .location-input input:focus {
-    border-color: var(--color-ocean);
+    border-color: #0052CC;
     outline: none;
 }
 
 .location-input button {
     padding: var(--spacing-md) var(--spacing-lg);
-    background-color: var(--color-ocean);
+    background-color: #0052CC;
     color: var(--color-white);
     border: none;
     border-radius: var(--radius-lg);
@@ -663,7 +666,7 @@ button, input, textarea, select {
 }
 
 .location-input button:hover {
-    background-color: #0077AA;
+    background-color: #003DA5;
 }
 
 .weather-grid {
@@ -680,11 +683,11 @@ button, input, textarea, select {
     text-align: center;
     margin-bottom: var(--spacing-lg);
     padding-bottom: var(--spacing-lg);
-    border-bottom: 2px solid var(--color-ocean);
+    border-bottom: 2px solid #0052CC;
 }
 
 .weather-forecast-header h3 {
-    color: var(--color-ocean);
+    color: #0052CC;
     margin-bottom: var(--spacing-sm);
 }
 
@@ -700,7 +703,7 @@ button, input, textarea, select {
 }
 
 .forecast-card {
-    background: linear-gradient(135deg, var(--color-ocean) 0%, var(--color-sea-green) 100%);
+    background: linear-gradient(135deg, #0052CC 0%, #003DA5 100%);
     color: var(--color-white);
     padding: var(--spacing-lg);
     border-radius: var(--radius-lg);
@@ -723,7 +726,7 @@ button, input, textarea, select {
 .day-name {
     font-size: var(--font-size-lg);
     font-weight: var(--font-weight-bold);
-    color: var(--color-sand);
+    color: #E8EFFF;
 }
 
 .day-date {
@@ -866,7 +869,7 @@ button, input, textarea, select {
 
 .impact-stats {
     padding: var(--spacing-3xl) var(--spacing-md);
-    background: linear-gradient(135deg, var(--color-ocean) 0%, var(--color-sea-green) 100%);
+    background: linear-gradient(135deg, #0052CC 0%, #003DA5 100%);
     color: var(--color-white);
 }
 
@@ -894,7 +897,7 @@ button, input, textarea, select {
     font-size: var(--font-size-4xl);
     font-weight: var(--font-weight-bold);
     margin-bottom: var(--spacing-md);
-    color: var(--color-sand);
+    color: #E8EFFF;
 }
 
 .stat-label {
@@ -983,7 +986,7 @@ button, input, textarea, select {
 
 .cta-section {
     padding: var(--spacing-3xl) var(--spacing-md);
-    background: linear-gradient(135deg, var(--color-ocean) 0%, var(--color-coral) 100%);
+    background: linear-gradient(135deg, #0052CC 0%, #003DA5 100%);
     color: var(--color-white);
 }
 
@@ -1060,7 +1063,7 @@ button, input, textarea, select {
 }
 
 .footer-section h3, .footer-section h4 {
-    color: var(--color-sand);
+    color: #E8EFFF;
     margin-bottom: var(--spacing-md);
 }
 
@@ -1098,13 +1101,13 @@ button, input, textarea, select {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: var(--color-ocean);
+    background-color: #0052CC;
     border-radius: var(--radius-full);
     transition: background-color var(--transition-fast);
 }
 
 .social-links a:hover {
-    background-color: var(--color-coral);
+    background-color: #003DA5;
 }
 
 .footer-bottom {
@@ -1120,7 +1123,7 @@ button, input, textarea, select {
 }
 
 .footer-bottom a:hover {
-    color: var(--color-sand);
+    color: #E8EFFF;
 }
 
 /* ========================================
@@ -1198,7 +1201,7 @@ input:valid {
     position: absolute;
     top: -40px;
     left: 0;
-    background: var(--color-ocean);
+    background: #0052CC;
     color: var(--color-white);
     padding: var(--spacing-sm) var(--spacing-md);
     z-index: 100;
@@ -1235,16 +1238,16 @@ input:valid {
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #0F172A;
+        background-color: #0A0E27;
         color: #F1F5F9;
     }
 
     .navbar {
-        background-color: #1A1A2E;
+        background-color: #1E2A4A;
     }
 
     .logo {
-        color: var(--color-sand);
+        color: #E8EFFF;
     }
 
     .feature-card,
@@ -1252,41 +1255,41 @@ input:valid {
     .weather-card,
     .crew-card,
     .signup-form {
-        background-color: #1E293B;
-        border-color: #334155;
+        background-color: #1A2A52;
+        border-color: #2A3F7F;
     }
 
     .event-card:hover {
-        border-color: var(--color-ocean);
+        border-color: #0052CC;
     }
 
     .features {
-        background-color: #0F172A;
+        background-color: #0A0E27;
     }
 
     .weather-section {
-        background: linear-gradient(135deg, rgba(0, 153, 204, 0.1), rgba(38, 166, 154, 0.1));
+        background: linear-gradient(135deg, rgba(0, 82, 204, 0.15), rgba(0, 61, 165, 0.15));
     }
 
     .cleanup-events {
-        background-color: #0F172A;
+        background-color: #0A0E27;
     }
 
     .footer {
-        background-color: #0F172A;
-        border-top: 1px solid #334155;
+        background-color: #0A0E27;
+        border-top: 1px solid #2A3F7F;
     }
 
     .location-input input {
-        background-color: #1E293B;
+        background-color: #1A2A52;
         color: #F1F5F9;
-        border-color: #334155;
+        border-color: #2A3F7F;
     }
 
     .form-group input {
-        background-color: #1E293B;
+        background-color: #1A2A52;
         color: #F1F5F9;
-        border-color: #334155;
+        border-color: #2A3F7F;
     }
 
     .form-group label {
@@ -1294,21 +1297,39 @@ input:valid {
     }
 
     .signup-form {
-        background-color: #1E293B;
+        background-color: #1A2A52;
     }
 
     .loading-skeleton {
-        background: linear-gradient(90deg, #334155 25%, #475569 50%, #334155 75%);
-    }
-
-    .weather-section {
-        background: linear-gradient(135deg, rgba(0, 153, 204, 0.1), rgba(38, 166, 154, 0.1));
+        background: linear-gradient(90deg, #2A3F7F 25%, #3A5FA5 50%, #2A3F7F 75%);
     }
 
     .weather-error {
-        background-color: #7F1D1D;
+        background-color: #5F2A2A;
         color: #FCA5A5;
         border-left-color: #FCA5A5;
+    }
+
+    .weather-forecast-header {
+        border-bottom-color: #E8EFFF;
+    }
+
+    .weather-forecast-header h3 {
+        color: #E8EFFF;
+    }
+
+    .forecast-subtitle {
+        color: #CBD5E1;
+    }
+
+    .forecast-card {
+        background: linear-gradient(135deg, #1A3D7F 0%, #0F2A5F 100%);
+        border-color: #2A3F7F;
+    }
+
+    .forecast-card:hover {
+        border-color: #E8EFFF;
+        background: linear-gradient(135deg, #1F4A95 0%, #1A3A7F 100%);
     }
 
     .weather-forecast-header {
