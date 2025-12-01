@@ -232,7 +232,7 @@ const app = {
     },
 
     getMockWeatherForecast() {
-        // Mock 4-day weather forecast for development/fallback
+        // Mock 7-day weather forecast for development/fallback
         const today = new Date();
         const forecast = [];
         
@@ -241,9 +241,12 @@ const app = {
             { text: 'Partly Cloudy', icon: '⛅', tempHigh: 27, tempLow: 23 },
             { text: 'Thundery Showers', icon: '⛈️', tempHigh: 26, tempLow: 22 },
             { text: 'Cloudy', icon: '☁️', tempHigh: 25, tempLow: 21 },
+            { text: 'Sunny', icon: '☀️', tempHigh: 28, tempLow: 24 },
+            { text: 'Partly Cloudy', icon: '⛅', tempHigh: 27, tempLow: 23 },
+            { text: 'Thundery Showers', icon: '⛈️', tempHigh: 26, tempLow: 22 },
         ];
         
-        for (let i = 0; i < 4; i++) {
+        for (let i = 0; i < 7; i++) {
             const date = new Date(today);
             date.setDate(date.getDate() + i);
             const condition = conditions[i];
@@ -281,7 +284,7 @@ const app = {
 
             forecastHtml = `
                 <div class="weather-forecast-header">
-                    <h3>4-Day Weather Forecast for ${location}</h3>
+                    <h3>7-Day Weather Forecast for ${location}</h3>
                     <p class="forecast-subtitle">Singapore - National Environment Agency (NEA)</p>
                 </div>
                 <div class="forecast-grid">
