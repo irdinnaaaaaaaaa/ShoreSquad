@@ -698,8 +698,9 @@ button, input, textarea, select {
 
 .forecast-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--spacing-lg);
+    width: 100%;
 }
 
 .forecast-card {
@@ -1155,6 +1156,15 @@ input:valid {
    RESPONSIVE DESIGN
    ======================================== */
 
+/* ========================================
+   TABLET RESPONSIVE
+   ======================================== */
+@media (max-width: 1024px) {
+    .forecast-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     :root {
         --font-size-4xl: 2rem;
@@ -1174,7 +1184,10 @@ input:valid {
     .features-grid,
     .events-grid,
     .crews-grid,
-    .stats-grid,
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
     .forecast-grid {
         grid-template-columns: 1fr;
     }
