@@ -623,7 +623,7 @@ button, input, textarea, select {
 
 .weather-section {
     padding: var(--spacing-3xl) var(--spacing-md);
-    background: linear-gradient(135deg, rgba(173, 216, 230, 0.1), rgba(135, 206, 235, 0.1));
+    background-color: #FFFFFF;
 }
 
 .weather-section h2 {
@@ -1309,7 +1309,7 @@ input:valid {
     }
 
     .weather-section {
-        background: linear-gradient(135deg, rgba(0, 82, 204, 0.15), rgba(0, 61, 165, 0.15));
+        background-color: #0A0E27;
     }
 
     .cleanup-events {
