@@ -1,0 +1,26 @@
+{
+  "name": "shoresquad",
+  "version": "1.0.0",
+  "description": "Rally your crew, track weather, and hit the next beach cleanup",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server",
+    "dev": "live-server --port=3000",
+    "build": "echo 'Build script placeholder'",
+    "test": "echo 'No tests configured yet'"
+  },
+  "keywords": [
+    "beach",
+    "cleanup",
+    "environment",
+    "social",
+    "map",
+    "weather"
+  ],
+  "author": "ShoreSquad Team",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {}
+}

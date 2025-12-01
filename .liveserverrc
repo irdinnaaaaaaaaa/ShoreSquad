@@ -1,0 +1,21 @@
+{
+  "port": 5500,
+  "root": ".",
+  "open": "index.html",
+  "ignore": "node_modules,dist",
+  "file": "index.html",
+  "wait": 1000,
+  "mount": [
+    [
+      "/node_modules",
+      "./node_modules"
+    ]
+  ],
+  "logLevel": 0,
+  "middleware": [
+    {
+      "mount": "/",
+      "middleware": "spa"
+    }
+  ]
+}
