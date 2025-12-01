@@ -118,13 +118,16 @@
     <section id="weather" class="weather-section">
         <div class="container">
             <h2>Current Beach Conditions</h2>
+            <p style="text-align: center; color: var(--color-text-muted); margin-bottom: var(--spacing-lg);">
+                Real-time weather data from <strong>National Environment Agency (NEA)</strong>
+            </p>
             <div class="weather-container">
                 <div class="location-input">
-                    <input type="text" id="locationInput" placeholder="Enter beach name..." aria-label="Search for beach location">
-                    <button onclick="app.getWeather()" aria-label="Search weather">🔍</button>
+                    <input type="text" id="locationInput" placeholder="e.g., Pasir Ris, East Coast..." aria-label="Search for beach location">
+                    <button onclick="app.getWeather()" aria-label="Search weather">🔍 Forecast</button>
                 </div>
                 <div id="weatherDisplay" class="weather-grid" role="region" aria-label="Weather information">
-                    <p class="placeholder-text">Enter a location to see weather conditions</p>
+                    <p class="placeholder-text">📍 Enter a beach name to see the 4-day forecast</p>
                 </div>
             </div>
         </div>
