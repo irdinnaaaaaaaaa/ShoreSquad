@@ -79,10 +79,33 @@
         </div>
     </section>
 
-    <!-- Cleanup Events Section -->
+    <!-- Cleanup Events Section with Map -->
     <section id="cleanup" class="cleanup-events">
         <div class="container">
             <h2>Upcoming Cleanup Events</h2>
+            
+            <!-- Next Cleanup Location Map -->
+            <div class="next-cleanup-highlight">
+                <div class="cleanup-info">
+                    <h3>🎯 Next Cleanup: Pasir Ris Beach</h3>
+                    <p><strong>Location:</strong> Street View Asia, Pasir Ris, Singapore</p>
+                    <p><strong>Coordinates:</strong> 1.381497°N, 103.955574°E</p>
+                    <p><strong>Time:</strong> 9:00 AM - 12:00 PM</p>
+                    <button class="btn btn-primary" onclick="app.joinEvent(1)">Register for Event</button>
+                </div>
+                <iframe 
+                    title="Pasir Ris Beach Cleanup Location - Next Cleanup"
+                    class="maps-iframe" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.5936234567!2d103.95537!3d1.381497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da183b0f0f0f0f%3A0x0!2sStreet%20View%20Asia%2C%20Pasir%20Ris!5e0!3m2!1sen!2ssg!4v1701432000000!5m2!1sen!2ssg" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    aria-label="Google Maps showing Pasir Ris Beach cleanup location">
+                </iframe>
+            </div>
+
+            <!-- Other Upcoming Events -->
+            <h3 style="margin-top: var(--spacing-2xl); margin-bottom: var(--spacing-lg);">Other Events</h3>
             <div id="eventsContainer" class="events-grid" role="region" aria-label="Upcoming cleanup events">
                 <div class="loading-skeleton"></div>
                 <div class="loading-skeleton"></div>
