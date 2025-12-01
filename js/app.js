@@ -653,6 +653,81 @@ if (document.readyState === 'loading') {
     app.init();
 }
 
+
+// ========================================
+// CHAT WIDGET FUNCTIONALITY
+// ========================================
+
+function initializeChatWidget() {
+    const chatButton = document.getElementById('chatButton');
+    const chatWidget = document.getElementById('chatWidget');
+    const chatToggle = document.getElementById('chatToggle');
+    const chatInput = document.getElementById('chatInput');
+    const chatSend = document.getElementById('chatSend');
+    const chatMessages = document.getElementById('chatMessages');
+
+    if (!chatButton) return;
+
+    // Toggle chat widget
+    chatButton.addEventListener('click', () => {
+        chatWidget.classList.toggle('active');
+        if (chatWidget.classList.contains('active')) {
+            chatInput.focus();
+        }
+    });
+
+    // Close chat widget
+    chatToggle.addEventListener('click', () => {
+        chatWidget.classList.remove('active');
+    });
+
+    // Send message on button click
+    chatSend.addEventListener('click', sendMessage);
+
+    // Send message on Enter key
+    chatInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            sendMessage();
+        }
+    });
+
+    function sendMessage() {
+        const message = chatInput.value.trim();
+        if (!message) return;
+
+        // Add user message
+        addMessage(message, 'user-message');
+        chatInput.value = '';
+
+        // Simulate bot response
+        setTimeout(() => {
+            const responses = [
+                '🏖️ Great question! You can find upcoming cleanups in the "Cleanup Events" section.',
+                '💙 Thanks for your interest! You can join a crew by scrolling down to "Join a Crew Near You".',
+                '📍 Use our weather forecast to check conditions before heading out to the beach!',
+                '👥 You can create a new crew or join an existing one. It\'s easy!',
+                '🌊 That\'s awesome! Every piece of trash collected counts toward our impact goal.',
+                '💬 Feel free to ask me anything about ShoreSquad!',
+                '✨ We\'re so glad you\'re here! Let\'s make a difference together.',
+                '🎯 Have you checked out our upcoming cleanup events yet?',
+            ];
+            const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+            addMessage(randomResponse, 'bot-message');
+        }, 500);
+
+        // Scroll to bottom
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function addMessage(text, className) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${className}`;
+        messageDiv.innerHTML = `<p>${text}</p>`;
+        chatMessages.appendChild(messageDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+}
+
 // Service Worker Registration (for offline capability)
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
@@ -662,6 +737,14 @@ if ('serviceWorker' in navigator) {
     });
 }
 
+// Initialize chat widget when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    if (app.init) {
+        initializeChatWidget();
+    }
+});
+
 // Console welcome message
 console.log('%c🌊 Welcome to ShoreSquad!', 'font-size: 20px; color: #0099CC; font-weight: bold;');
 console.log('%cMobilizing young people to clean beaches and protect our coasts.', 'font-size: 14px; color: #26A69A;');
+
